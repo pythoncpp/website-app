@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('update the sonar qube report') {
+            steps {
+                sh 'sonar-scanner -Dsonar.projectKey=website-app -Dsonar.sources=. -Dsonar.host.url=http://172.16.140.166:9000 -Dsonar.login=sqp_9a940a5f2927e01a752a20a50c9218f79b062f96' 
+            }
+        }
+
         stage('docker image build') {
             steps {
                 echo "building the image with build number ${BUILD_NUMBER}"
