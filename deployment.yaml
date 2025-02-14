@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: website-app
-          image: amitksunbeam/website-app:8
+          image: amitksunbeam/website-app:9
           ports:
             - containerPort: 80
           resources:
