@@ -3,3 +3,5 @@ function myFunction() {
   const name = 'test'
   console.log('inside myFunction')
 }
+
+myFunction()
